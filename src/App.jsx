@@ -17,7 +17,7 @@ function App() {
       id: Date.now(),
     };
     createPost(newPost);
-    setPost({ title: "" });
+    //setPost({ title: "" });
   };
   const createPost = (newPost) => {
     setPosts([...posts, newPost]);
@@ -48,6 +48,9 @@ function App() {
         </div>
         <div>
           <h2>Задачи</h2>
+          <progress id="file" max="100" value="70">
+            70%
+          </progress>
         </div>
       </div>
     </>
