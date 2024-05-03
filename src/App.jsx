@@ -5,24 +5,35 @@ import "./App.css";
 import { MyModal } from "./components/MyModal/MyModal";
 import { MyButton } from "./components/button/MyButton";
 import { CategoryList } from "./components/CategoryList";
+import { useDispatch, useSelector } from "react-redux";
+import categorySlice, {
+  setTitle,
+  addCategory,
+} from "./store/category/category.slice";
 
 function App() {
   const [modal, setModal] = useState(false);
-  const [post, setPost] = useState({ title: "", body: "" });
-  const [posts, setPosts] = useState([]);
+  const [post, setPost] = useState({ title: "" });
+  //const [posts, setPosts] = useState([]);
+  const dispatch = useDispatch();
+  const posts = useSelector((state) => state.category);
   const addNewPost = (e) => {
     e.preventDefault();
     const newPost = {
       ...post,
       id: Date.now(),
     };
-    createPost(newPost);
+    //createPost(newPost);
+    //dispatch(setTitle(newPost.title));
+    dispatch(addCategory(newPost));
+    setModal(false);
     //setPost({ title: "" });
   };
   const createPost = (newPost) => {
-    setPosts([...posts, newPost]);
+    //setPosts([...posts, newPost]);
     setModal(false);
   };
+
   return (
     <>
       <div>
