@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя задача</title>
+    <!-- Подключение библиотеки Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Стили для задачи */
+        .task {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .task-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .task-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .task-description {
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <!-- Задача -->
+    <div class="task">
+        <i class="fas fa-check task-icon"></i>
+        <div class="task-content">
+            <div class="task-title">Покупка продуктов</div>
+            <div class="task-description">Купить молоко, яйца и хлеб в ближайшем магазине.</div>
+        </div>
+    </div>
+</body>
+</html>
+
