@@ -16,3 +16,4 @@ core i9 and 4090- minimals
 no fedd back for tha 
 ## privacy
 licence - open to use
+
