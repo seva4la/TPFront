@@ -1,39 +1,21 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import "./App.css";
 import { MyModal } from "./components/MyModal/MyModal";
 import { MyButton } from "./components/button/MyButton";
 import { CategoryList } from "./components/CategoryList";
-import { useDispatch, useSelector } from "react-redux";
-import categorySlice, {
-  setTitle,
-  addCategory,
-} from "./store/category/category.slice";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import { useAddCategories } from "./hooks/useAddCategories";
 
 function App() {
   const [modal, setModal] = useState(false);
   const [post, setPost] = useState({ title: "" });
-  //const [posts, setPosts] = useState([]);
-  const dispatch = useDispatch();
-  const posts = useSelector((state) => state.category);
-  const addNewPost = (e) => {
-    e.preventDefault();
-    const newPost = {
-      ...post,
-      id: Date.now(),
-    };
-    //createPost(newPost);
-    //dispatch(setTitle(newPost.title));
-    dispatch(addCategory(newPost));
-    setModal(false);
-    //setPost({ title: "" });
-  };
-  const createPost = (newPost) => {
-    //setPosts([...posts, newPost]);
-    setModal(false);
-  };
 
+  const handleAddCategory = useAddCategories(post.title);
+
+  const posts = useSelector((state) => state.category);
+  console.log(posts);
   return (
     <>
       <div>
@@ -52,7 +34,7 @@ function App() {
                 placeholder="Name"
               />
 
-              <MyButton onClick={addNewPost}>Add post</MyButton>
+              <MyButton onClick={handleAddCategory}>Add post</MyButton>
             </form>
           </MyModal>
           <CategoryList posts={posts} />

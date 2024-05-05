@@ -5,17 +5,20 @@ import { CategoryItem } from "./CategoryItem";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCategory } from "../store/category/category.slice";
+import { useGetCategories } from "../hooks/useGetCategories";
 
 export const CategoryList = ({ posts }) => {
+  const categories = useGetCategories();
+  console.log(categories);
   const dispatch = useDispatch();
-  if (!posts.length) {
+  if (!categories) {
     return <h1 style={{ textAlign: "center" }}>Категории не найдены</h1>;
   }
 
   return (
     <div>
       <TransitionGroup>
-        {posts.map((post, index) => (
+        {categories.map((post, index) => (
           <CSSTransition key={post.id} timeout={500} classNames="post">
             <CategoryItem
               number={index + 1}
