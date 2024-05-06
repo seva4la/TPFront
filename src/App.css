@@ -1,1 +1,39 @@
+.header{
+    min-height: 132px;
+    padding: 22px 556px;
+    background: #9E8BAF;
+    margin-bottom: 17.5px;
+  }
+
+  h1{
+    font-family: 'Nerko One', 'Montserrat';
+    color: white;
+    font-size: 90px;
+  }
+
+  h2{
+    font-family: 'Montserrat';
+    color: black;
+    font-size: 40px;
+    margin: 19px 40px;
+  }
+
+  .category{
+    height: 831px;
+    width: 420px;
+    padding: 43.5px 32px;
+    border-radius: 33px;
+    color: white;
+    margin: 0 auto;
+  }
+
+  .zadachi{
+    height: 831px;
+    width: 833px;
+    padding: 43.5px 32px;
+    border-radius: 33px;
+    color: white;
+    margin: 0 auto;
+    float: right;
+  } 
 

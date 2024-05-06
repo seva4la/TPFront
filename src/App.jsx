@@ -7,6 +7,7 @@ import { MyButton } from "./components/button/MyButton";
 import { CategoryList } from "./components/CategoryList";
 
 function App() {
+  const [color, setColor] = useState(FAE9EC);
   const [modal, setModal] = useState(false);
   const [post, setPost] = useState({ title: "", body: "" });
   const [posts, setPosts] = useState([]);
@@ -25,9 +26,9 @@ function App() {
   };
   return (
     <>
-      <div>
+      <div class = "header">
         <h1>TODOLIST</h1>
-        <div>
+        <div class = "category">
           <h2>Категории</h2>
           <MyButton style={{ marginTop: 30 }} onClick={() => setModal(true)}>
             Создать категорию
@@ -46,7 +47,7 @@ function App() {
           </MyModal>
           <CategoryList posts={posts} />
         </div>
-        <div>
+        <div class = "zadachi">
           <h2>Задачи</h2>
         </div>
       </div>
