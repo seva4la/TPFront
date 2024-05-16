@@ -1,26 +1,16 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 
-export const useGetCategories = () => {
+export const useGetCategories = ({ trigger, data, isLoading }) => {
   const [categories, setCategories] = useState();
+  useEffect(() => {
+    trigger();
+  }, [trigger]);
 
   useEffect(() => {
-    const func = async () => {
-      const options = {
-        method: "GET",
-        url: "http://127.0.0.1:8000/categories/get",
-      };
-
-      try {
-        const response = await axios.request(options);
-        setCategories(response.data);
-        console.log(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    func();
-  }, []);
+    if (data && !isLoading) {
+      setCategories(data);
+    }
+  }, [data, isLoading]);
 
   return categories;
 };

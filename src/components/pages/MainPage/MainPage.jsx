@@ -8,6 +8,7 @@ import { useState } from "react";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { AddCategory } from "./AddCategory";
+import { useLazyAxios } from "use-axios-client";
 
 export function MainPage() {
   //Cookies.set("userToken", `${token}`);
@@ -28,6 +29,10 @@ export function MainPage() {
   const token = Cookies.get("userToken");
   const isUserAuthorised = token && token.length > 0 ? true : false;
 
+  const [trigger, { data, loading: isLoading }] = useLazyAxios({
+    url: "http://127.0.0.1:8000/categories/get",
+  });
+
   //   const handleCreate = (e) => {
   //     //e.preventDefault();
   //     setPost({ ...post, title: e.target.value });
@@ -39,7 +44,11 @@ export function MainPage() {
     <>
       {modal && (
         <MyModal visible={modal} setVisisble={setModal}>
-          <AddCategory />
+          <AddCategory
+            setVisisble={setModal}
+            trigger={trigger}
+            isLoading={isLoading}
+          />
         </MyModal>
       )}
       <div>
@@ -58,7 +67,7 @@ export function MainPage() {
             Создать категорию
           </MyButton>
 
-          <CategoryList posts={posts} />
+          <CategoryList posts={posts} data={data} trigger={trigger} />
         </div>
         <div>
           <h2>Задачи</h2>

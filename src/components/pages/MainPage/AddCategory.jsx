@@ -2,12 +2,13 @@ import { useCreateCategory } from "../../../hooks/useCreateCategory";
 import { useState } from "react";
 import { MyButton } from "../../button/MyButton";
 import Cookies from "js-cookie";
-export const AddCategory = () => {
+export const AddCategory = ({ setVisisble, trigger }) => {
   const token = Cookies.get("userToken");
 
   const [catTitle, setCatTitle] = useState("");
   const handleAddCategory = useCreateCategory(catTitle, token);
   console.log(catTitle, typeof catTitle);
+
   return (
     <div>
       <input
@@ -17,7 +18,15 @@ export const AddCategory = () => {
         placeholder="Name"
       />
 
-      <MyButton onClick={handleAddCategory}>создать </MyButton>
+      <MyButton
+        onClick={() => {
+          handleAddCategory();
+          setVisisble(false);
+          trigger();
+        }}
+      >
+        создать{" "}
+      </MyButton>
     </div>
   );
 };
