@@ -14,6 +14,7 @@ export const useGetCategories = () => {
       try {
         const response = await axios.request(options);
         setCategories(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error(error);
       }
