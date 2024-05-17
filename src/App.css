@@ -1,24 +1,34 @@
-.header{
-    min-height: 132px;
-    padding: 22px 556px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/nerko-one');
+ 
+ .header{
+    height: 100px;
+    /* padding: 22px 556px; */
     background: #9E8BAF;
-    margin-bottom: 17.5px;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 25px;
   }
 
-  h1{
+h1{
     font-family: 'Nerko One', 'Montserrat';
-    color: white;
-    font-size: 90px;
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    text-align: center;
   }
 
-  h2{
-    font-family: 'Montserrat';
+  /* h2{
+    margin-left: 90px;
+    font-family: 'Montserrat', sans-serif;
     color: black;
     font-size: 40px;
-    margin: 19px 40px;
-  }
+    /* margin: 19px 40px; 
+  } */
+
 
   .category{
+    font-family: 'Montserrat', sans-serif;
     height: 831px;
     width: 420px;
     padding: 43.5px 32px;
@@ -26,14 +36,60 @@
     color: white;
     margin: 0 auto;
   }
+  /* .categ{
+    
+    top: 184px;
+    left: 187px;
+    /* height: 831px;
+    width: 833px; */
+    /* padding: 43.5px 32px;
+    border-radius: 33px; */
+    
+    /* margin: 0 auto;
+    float: right; 
+  }  */
+  .categ{
+    margin-left: 105px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 35px;
+    /* margin: 19px 40px; */
+  }
 
   .zadachi{
+    margin-left: 250px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 35px;
+  }
+
+  /* .zadachi{
+    font-family: 'Montserrat', sans-serif;
     height: 831px;
     width: 833px;
     padding: 43.5px 32px;
     border-radius: 33px;
-    color: white;
+    color: rgb(78, 32, 32);
     margin: 0 auto;
     float: right;
-  } 
+  }  */
+ 
+  .pryam1{
+    height: 560px;
+    width: 420px;
+    background-color: white;
+    border-radius: 33px;
+    /* margin-top: 81px; */
+    margin-left: 81px;
+    position: absolute;
+  }
 
+  .pryam2{
+    height: 560px;
+    width: 833px;
+    background-color: white;
+    border-radius: 33px;
+    margin-left: 527px;
+    position: absolute;
+    float: right;
+  }

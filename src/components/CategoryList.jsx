@@ -6,7 +6,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export const CategoryList = ({ posts }) => {
   if (!posts.length) {
-    return <h1 style={{ textAlign: "center" }}>Категории не найдены</h1>;
+    // return <h1 style={{ textAlign: "center" }}>Категории не найдены</h1>;
   }
 
   return (
