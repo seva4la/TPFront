@@ -3,24 +3,28 @@
 import React from "react";
 import { Edit, Trash } from "tabler-icons-react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteCategory } from "../store/category/category.slice";
 import { useDeleteCat } from "../hooks/useDeleteCat";
 
-export const CategoryItem = ({ post, onDelete, trigger }) => {
+export const CategoryItem = ({
+  post,
+  onUpdateId,
+  trigger,
+  setModalUpdateCat,
+  setCatId,
+}) => {
   const handleDelete = useDeleteCat();
-  const catTitle = useSelector((state) => state.category);
-  const handleDeleteCategory = () => {
-    onDelete();
-  };
-
-  /*<strong>{post.title}</strong>
-  <div>{post.body}</div>*/
+  //onClick={setModalUpdateCat(true)}
   return (
     <div>
       <div className="post">
         <div className="post__content">
           <div>{post.title}</div>
-          <button>
+          <button
+            onClick={() => {
+              setCatId(post.id);
+              setModalUpdateCat(true);
+            }}
+          >
             <Edit />
           </button>
           <button

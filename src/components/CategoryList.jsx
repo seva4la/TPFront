@@ -6,39 +6,48 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { useDispatch } from "react-redux";
 import { deleteCategory } from "../store/category/category.slice";
 import { useGetCategories } from "../hooks/useGetCategories";
-import { useEffect } from "react";
-import { useGetCatWithId } from "../hooks/useGetCatWithId";
-import { useDeleteCat } from "../hooks/useDeleteCat";
+import { useUpdateCategory } from "../hooks/useUpdateCat";
 import { useState } from "react";
 
+import { MyModal } from "./MyModal/MyModal";
+import { UpdateCat } from "./pages/MainPage/UpdateCat";
+
 export const CategoryList = ({ posts, trigger, data, isLoading, token }) => {
+  const [modalUpdateCat, setModalUpdateCat] = useState(false);
+  const [catId, setCatId] = useState();
+
   const categories = useGetCategories({ trigger, data, isLoading, token });
-
-  const handleDelete = useDeleteCat();
-
-  useEffect(() => {
-    trigger();
-  }, [trigger]);
 
   if (!categories || categories.length === 0) {
     return <h1 style={{ textAlign: "center" }}>Категории не найдены</h1>;
   }
-  /*
-onDelete={() => {
-                  handleDelete(post.id);
-                  trigger();
-                }}
-*/
+
   return (
     <div>
       {data && (
-        <TransitionGroup>
+        <>
           {categories.map((post, index) => (
-            <CSSTransition key={post.id} timeout={500} classNames="post">
-              <CategoryItem number={index + 1} post={post} trigger={trigger} />
-            </CSSTransition>
+            <>
+              <CategoryItem
+                number={index + 1}
+                post={post}
+                trigger={trigger}
+                setCatId={setCatId}
+                setModalUpdateCat={setModalUpdateCat}
+              />
+            </>
           ))}
-        </TransitionGroup>
+        </>
+      )}
+      {modalUpdateCat && (
+        <MyModal visible={modalUpdateCat} setVisisble={setModalUpdateCat}>
+          <UpdateCat
+            id={catId}
+            setVisisble={setModalUpdateCat}
+            trigger={trigger}
+            isLoading={isLoading}
+          />
+        </MyModal>
       )}
     </div>
   );
