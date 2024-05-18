@@ -18,15 +18,6 @@ h1{
     text-align: center;
   }
 
-  /* h2{
-    margin-left: 90px;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-size: 40px;
-    /* margin: 19px 40px; 
-  } */
-
-
   .category{
     font-family: 'Montserrat', sans-serif;
     height: 831px;
@@ -36,43 +27,21 @@ h1{
     color: white;
     margin: 0 auto;
   }
-  /* .categ{
-    
-    top: 184px;
-    left: 187px;
-    /* height: 831px;
-    width: 833px; */
-    /* padding: 43.5px 32px;
-    border-radius: 33px; */
-    
-    /* margin: 0 auto;
-    float: right; 
-  }  */
+
   .categ{
     margin-left: 105px;
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-size: 35px;
-    /* margin: 19px 40px; */
   }
 
   .zadachi{
-    margin-left: 250px;
+    margin-left: 270px;
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-size: 35px;
   }
 
-  /* .zadachi{
-    font-family: 'Montserrat', sans-serif;
-    height: 831px;
-    width: 833px;
-    padding: 43.5px 32px;
-    border-radius: 33px;
-    color: rgb(78, 32, 32);
-    margin: 0 auto;
-    float: right;
-  }  */
  
   .pryam1{
     height: 560px;
@@ -92,4 +61,36 @@ h1{
     margin-left: 527px;
     position: absolute;
     float: right;
+  }
+
+  .cr_categ{
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+  }
+
+  .fontbutcat{
+    font-size: 17px;
+    margin-left: 107px;
+    margin-top: -20px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background-color: 0%;
+    background-color:transparent;
+	  display:inline-block;
+	  cursor:pointer;
+    border:0px solid #84bbf3;
+  }
+
+  .fontbutzad{
+    font-size: 17px;
+    margin-left: 320px;
+    margin-top: -20px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background-color: 0%;
+    background-color:transparent;
+	  display:inline-block;
+	  cursor:pointer;
+    border:0px solid #84bbf3;
   }

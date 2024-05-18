@@ -5,6 +5,9 @@ import "./App.css";
 import { MyModal } from "./components/MyModal/MyModal";
 import { MyButton } from "./components/button/MyButton";
 import { CategoryList } from "./components/CategoryList";
+import { TextSize } from "tabler-icons-react";
+
+
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -29,8 +32,9 @@ function App() {
         <h1 class="header">TODOLIST</h1>
         <div class="pryam1">
           <h2 class ="categ">Категории</h2>
-          <MyButton style={{ marginTop: 30 }} onClick={() => setModal(true)}>
-            Создать категорию
+          <MyButton class = "fontbutcat" style={{ marginTop: -50}} onClick={() => setModal(true)}>
+           {/* <span style='fontbutcat'> + Создать категорию</span> */}
+           + Создать категорию
           </MyButton>
           <MyModal visible={modal} setVisisble={setModal}>
             <form>
@@ -48,6 +52,10 @@ function App() {
         </div>
         <div class="pryam2">
           <h2 class = "zadachi">Список задач</h2>
+          <MyButton class = "fontbutzad" style={{ marginTop: -50}} onClick={() => setModal(true)}>
+           {/* <span style='fontbutcat'> + Создать категорию</span> */}
+           + Создать задачу
+          </MyButton>
         </div>
       </div>
     </>
