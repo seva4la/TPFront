@@ -2,11 +2,13 @@ import { useCreateCategory } from "../../../hooks/useCreateCategory";
 import { useState } from "react";
 import { MyButton } from "../../button/MyButton";
 import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 export const AddCategory = ({ setVisisble, trigger }) => {
+  const navigate = useNavigate();
   const token = Cookies.get("userToken");
 
   const [catTitle, setCatTitle] = useState("");
-  const handleAddCategory = useCreateCategory(catTitle, token);
+  const handleAddCategory = useCreateCategory(catTitle, token, trigger);
   console.log(catTitle, typeof catTitle);
 
   return (
@@ -22,7 +24,8 @@ export const AddCategory = ({ setVisisble, trigger }) => {
         onClick={() => {
           handleAddCategory();
           setVisisble(false);
-          trigger();
+
+          // trigger();
         }}
       >
         создать{" "}

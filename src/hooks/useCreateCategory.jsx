@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const useCreateCategory = (title, token) => {
+export const useCreateCategory = (title, token, trigger) => {
   console.log("title");
   console.log(title);
   const handleButtonClick = async () => {
@@ -14,6 +14,7 @@ export const useCreateCategory = (title, token) => {
       const response = await axios.request(options);
       console.log(response);
       console.log("s added");
+      trigger();
     } catch (error) {
       console.error(error);
     }

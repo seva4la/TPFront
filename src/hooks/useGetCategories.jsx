@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-export const useGetCategories = ({ trigger, data, isLoading }) => {
+export const useGetCategories = ({ trigger, data, isLoading, token }) => {
+  const [userCat, setUserCat] = useState([]);
   const [categories, setCategories] = useState();
   useEffect(() => {
     trigger();
@@ -11,6 +12,13 @@ export const useGetCategories = ({ trigger, data, isLoading }) => {
       setCategories(data);
     }
   }, [data, isLoading]);
+  useEffect(() => {
+    if (categories) {
+      const filteredCats = categories.filter((cat) => cat.user_id === token);
+      setUserCat(filteredCats);
+    }
+  }, [categories, token]);
 
-  return categories;
+  return userCat;
+  //return categories;
 };

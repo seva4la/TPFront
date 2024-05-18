@@ -4,9 +4,14 @@ import React from "react";
 import { Edit, Trash } from "tabler-icons-react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCategory } from "../store/category/category.slice";
+import { useDeleteCat } from "../hooks/useDeleteCat";
 
-export const CategoryItem = ({ post, onDelete }) => {
+export const CategoryItem = ({ post, onDelete, trigger }) => {
+  const handleDelete = useDeleteCat();
   const catTitle = useSelector((state) => state.category);
+  const handleDeleteCategory = () => {
+    onDelete();
+  };
 
   /*<strong>{post.title}</strong>
   <div>{post.body}</div>*/
@@ -18,7 +23,12 @@ export const CategoryItem = ({ post, onDelete }) => {
           <button>
             <Edit />
           </button>
-          <button onClick={onDelete}>
+          <button
+            onClick={() => {
+              handleDelete(post.id, trigger);
+              trigger();
+            }}
+          >
             <Trash />
           </button>
         </div>

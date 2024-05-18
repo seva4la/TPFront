@@ -67,7 +67,12 @@ export function MainPage() {
             Создать категорию
           </MyButton>
 
-          <CategoryList posts={posts} data={data} trigger={trigger} />
+          <CategoryList
+            posts={posts}
+            data={data}
+            trigger={trigger}
+            token={token}
+          />
         </div>
         <div>
           <h2>Задачи</h2>
