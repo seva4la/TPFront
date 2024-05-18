@@ -6,10 +6,9 @@ import { MainPage } from "../pages/MainPage/MainPage";
 export const Router = () => (
   <BrowserRouter basename="/">
     <Routes>
-      <Route path="/" element={<MainPage />}>
-        <Route path="sign-in" element={<SignIn />} />
-        <Route path="sign-up" element={<SignUp />} />
-      </Route>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/sign-in" element={<SignIn />} />
+      <Route path="/sign-up" element={<SignUp />} />
     </Routes>
   </BrowserRouter>
 );
