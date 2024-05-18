@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SignIn.css";
+import { useUserAuth } from "../../../../hooks/useAuth";
 export const SignIn = () => {
   const [form, setForm] = useState({
     firstName: "",
@@ -13,11 +14,12 @@ export const SignIn = () => {
       [name]: value,
     });
   };
-
+  const handleUserAuth = useUserAuth(form);
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
     console.log("Form submitted:", form);
+    handleUserAuth();
   };
 
   return (

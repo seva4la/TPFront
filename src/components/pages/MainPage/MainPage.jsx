@@ -12,7 +12,7 @@ import { useLazyAxios } from "use-axios-client";
 
 export function MainPage() {
   //Cookies.set("userToken", `${token}`);
-  Cookies.set("userToken", `4db7b5a1-5915-4d8d-a4df-77f26a678171`);
+  // Cookies.set("userToken", `4db7b5a1-5915-4d8d-a4df-77f26a678171`);
   /*const unAuthorise = () => {
     Cookies.remove("userToken");
     navigate("/");
@@ -57,6 +57,18 @@ export function MainPage() {
             <button onClick={() => navigate("/sign-in")}>Авторизация</button>
             <button onClick={() => navigate("/sign-up")}>Регистрация</button>
             <div>Войдите в аккаунт</div>
+          </>
+        )}
+        {isUserAuthorised && (
+          <>
+            <button
+              onClick={() => {
+                Cookies.remove("userToken");
+                navigate("/");
+              }}
+            >
+              Выйти из аккаунта
+            </button>
           </>
         )}
 
