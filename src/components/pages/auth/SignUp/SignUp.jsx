@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SignUp.css";
+import { useUserRegister } from "../../../../hooks/useUserRegister";
 export const SignUp = () => {
   const [form, setForm] = useState({
     firstName: "",
@@ -14,11 +15,12 @@ export const SignUp = () => {
       [name]: value,
     });
   };
-
+  const handleUserRegister = useUserRegister(form);
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
     console.log("Form submitted:", form);
+    handleUserRegister();
   };
 
   return (
@@ -54,9 +56,9 @@ export const SignUp = () => {
               <label htmlFor="password">Повторите пароль</label>
               <input
                 type="password"
-                id="password2"
-                name="password2"
-                value={form.password}
+                id="password1"
+                name="password1"
+                value={form.password1}
                 onChange={handleChange}
                 required
               />
