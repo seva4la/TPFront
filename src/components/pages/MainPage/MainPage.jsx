@@ -11,12 +11,6 @@ import { AddCategory } from "./AddCategory";
 import { useLazyAxios } from "use-axios-client";
 
 export function MainPage() {
-  //Cookies.set("userToken", `${token}`);
-  // Cookies.set("userToken", `4db7b5a1-5915-4d8d-a4df-77f26a678171`);
-  /*const unAuthorise = () => {
-    Cookies.remove("userToken");
-    navigate("/");
-  };*/
   const navigate = useNavigate();
   const [modal, setModal] = useState(false);
   const [post, setPost] = useState({ title: "" });
