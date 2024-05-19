@@ -125,7 +125,6 @@ h2 {
 }
 .authb {
   font-size: 17px;
-  margin-left: auto;
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
   background-color: 0%;
@@ -133,15 +132,12 @@ h2 {
   display: inline-block;
   cursor: pointer;
   border: none;
-
   font-family: "Montserrat", sans-serif;
   border: none;
-  padding: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin-left: 10px;
-  margin-top: 20px;
   margin-left: 300px;
-  position: absolute;
+  margin-right: 30px;
+  margin-top: 20px;
 }

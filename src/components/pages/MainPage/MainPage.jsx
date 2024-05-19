@@ -72,7 +72,6 @@ export function MainPage() {
               <button className="authb" onClick={() => navigate("/sign-up")}>
                 Регистрация
               </button>
-              <div>Войдите в аккаунт</div>
             </>
           )}
           {isUserAuthorised && (
