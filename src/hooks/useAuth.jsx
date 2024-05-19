@@ -19,12 +19,19 @@ export const useUserAuth = (form) => {
     try {
       const response = await axios.request(options);
       console.log("try");
-      console.log(response);
+      console.log(response.data);
+
       console.log("User auth");
       Cookies.set("userToken", `${response.data.id}`);
       navigate("/");
     } catch (error) {
       console.error(error);
+      console.log(error.response);
+      if (error.response && error.response.statusText == "Not Found") {
+        alert(
+          "Пользователь не найден. Попробуете зарегестрироваться или изменить введённые данные"
+        );
+      }
     }
   };
 
