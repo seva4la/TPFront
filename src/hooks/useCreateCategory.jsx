@@ -1,4 +1,5 @@
 import axios from "axios";
+import { api } from "../Const/const";
 
 export const useCreateCategory = (title, token, trigger) => {
   console.log("title");
@@ -7,7 +8,7 @@ export const useCreateCategory = (title, token, trigger) => {
     console.log("handleButtonClick");
     const options = {
       method: "POST",
-      url: "http://127.0.0.1:8000/categories/creates",
+      url: `${api}/categories/creates`,
       data: { title: `${title}`, user_id: `${token}` },
     };
     try {

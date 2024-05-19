@@ -1,4 +1,5 @@
 import axios from "axios";
+import { api } from "../Const/const";
 
 export const useAddCategories = (title) => {
   console.log("title");
@@ -6,7 +7,7 @@ export const useAddCategories = (title) => {
   const handleButtonClick = async () => {
     const options = {
       method: "POST",
-      url: "http://127.0.0.1:8000/categories/creates",
+      url: `${api}/categories/creates`,
       data: { title: `${title}` },
     };
     try {

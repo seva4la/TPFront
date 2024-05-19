@@ -9,6 +9,7 @@ import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { AddCategory } from "./AddCategory";
 import { useLazyAxios } from "use-axios-client";
+import { api } from "../../../Const/const";
 
 export function MainPage() {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ export function MainPage() {
   const isUserAuthorised = token && token.length > 0 ? true : false;
 
   const [trigger, { data, loading: isLoading }] = useLazyAxios({
-    url: "http://127.0.0.1:8000/categories/get",
+    url: `${api}/categories/get`,
   });
 
   //   const handleCreate = (e) => {

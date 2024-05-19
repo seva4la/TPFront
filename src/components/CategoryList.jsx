@@ -3,8 +3,7 @@
 import React from "react";
 import { CategoryItem } from "./CategoryItem";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { useDispatch } from "react-redux";
-import { deleteCategory } from "../store/category/category.slice";
+
 import { useGetCategories } from "../hooks/useGetCategories";
 import { useUpdateCategory } from "../hooks/useUpdateCat";
 import { useState } from "react";
