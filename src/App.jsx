@@ -29,6 +29,9 @@ function App() {
   return (
     <>
       <div class="background">
+        <MyButton class = "user" style={{ marginTop: 10}} onClick={() => setModal(true)}>
+          user
+          </MyButton>
         <h1 class="header">TODOLIST</h1>
         <div class="pryam1">
           <h2 class ="categ">Категории</h2>
@@ -36,7 +39,8 @@ function App() {
            {/* <span style='fontbutcat'> + Создать категорию</span> */}
            + Создать категорию
           </MyButton>
-          <MyModal visible={modal} setVisisble={setModal}>
+          <MyModal visible={modal} setVisisble={setModal} title = 'Заголовок'>
+            
             <form>
               <input
                 value={post.title}

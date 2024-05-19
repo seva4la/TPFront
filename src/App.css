@@ -74,12 +74,12 @@ h1{
     margin-left: 107px;
     margin-top: -20px;
     font-family: 'Montserrat', sans-serif;
-    color: black;
+    color: #592D81;
     background-color: 0%;
     background-color:transparent;
 	  display:inline-block;
 	  cursor:pointer;
-    border:0px solid #84bbf3;
+    border:none;
   }
 
   .fontbutzad{
@@ -87,10 +87,36 @@ h1{
     margin-left: 320px;
     margin-top: -20px;
     font-family: 'Montserrat', sans-serif;
-    color: black;
+    color: #592D81;
     background-color: 0%;
     background-color:transparent;
 	  display:inline-block;
 	  cursor:pointer;
-    border:0px solid #84bbf3;
+    border:none;
+  }
+
+  .user{
+    background-color: #e9c8ff;
+    font-family: 'Montserrat', sans-serif;
+    color: #592D81;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    height: 85px;
+    width: 85px;
+    margin-top: 10px;
+    margin-left: 1280px;
+    border-radius: 100%;
+    position: absolute;
+  }
+  
+  .modalcatcreat{
+    height: 560px;
+    width: 1284px;
+    background-color: #9E8BAF;
+    border-radius: 33px;
+    margin-left: 527px;
+    position: absolute;
   }
