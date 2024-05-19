@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/nerko-one");
+
+.header {
+  height: 100px;
+  /* padding: 22px 556px; */
+  background: #9e8baf;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-family: "Nerko One", "Montserrat";
+  color: rgb(255, 255, 255);
+  font-size: 70px;
+  text-align: center;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #592d81;
+  font-size: 20px;
+}
+.category {
+  font-family: "Montserrat", sans-serif;
+  height: 831px;
+  width: 420px;
+  padding: 43.5px 32px;
+  border-radius: 33px;
+  color: white;
+  margin: 0 auto;
+}
+
+.categ {
+  margin-left: 105px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 35px;
+}
+
+.zadachi {
+  margin-left: 270px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 35px;
+}
+
+.pryam1 {
+  height: 560px;
+  width: 420px;
+  background-color: white;
+  border-radius: 33px;
+  /* margin-top: 81px; */
+  margin-left: 81px;
+  position: absolute;
+}
+
+.pryam2 {
+  height: 560px;
+  width: 833px;
+  background-color: white;
+  border-radius: 33px;
+  margin-left: 527px;
+  position: absolute;
+  float: right;
+}
+
+.cr_categ {
+  font-size: 26px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+.fontbutcat {
+  font-size: 17px;
+  margin-left: 107px;
+  margin-top: -20px;
+  font-family: "Montserrat", sans-serif;
+  color: #592d81;
+  background-color: 0%;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+.fontbutzad {
+  font-size: 17px;
+  margin-left: 320px;
+  margin-top: -20px;
+  font-family: "Montserrat", sans-serif;
+  color: #592d81;
+  background-color: 0%;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+.user {
+  background-color: #e9c8ff;
+  font-family: "Montserrat", sans-serif;
+  color: #592d81;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  margin-top: 10px;
+  margin-left: 1280px;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.modalcatcreat {
+  height: 560px;
+  width: 1284px;
+  background-color: #9e8baf;
+  border-radius: 33px;
+  margin-left: 527px;
+  position: absolute;
+}
+.authb {
+  font-size: 17px;
+  margin-left: auto;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  background-color: 0%;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-left: 300px;
+  position: absolute;
+}

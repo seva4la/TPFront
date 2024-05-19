@@ -1,9 +1,26 @@
 .myBtn {
-  padding: 5px 15px;
-  color: teal;
-  font-size: 14px;
+}
+.fontbutcat {
+  font-size: 17px;
+  margin-left: 107px;
+  margin-top: -20px;
+  font-family: "Montserrat", sans-serif;
+  color: #592d81;
+  background-color: 0%;
   background-color: transparent;
-  border: 1px solid teal;
+  display: inline-block;
   cursor: pointer;
-  border-radius: 5px;
+  border: none;
+}
+.fontbutzad {
+  font-size: 17px;
+  margin-left: 320px;
+  margin-top: -20px;
+  font-family: "Montserrat", sans-serif;
+  color: #592d81;
+  background-color: 0%;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
 }

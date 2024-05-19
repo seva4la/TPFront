@@ -1,5 +1,6 @@
 .Modal {
   position: absolute;
+  z-index: 1;
   top: 40%;
   left: 40%;
   display: flex;

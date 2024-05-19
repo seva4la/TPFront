@@ -33,7 +33,5 @@ export const useUserAuth = (form) => {
       );
     }
   };
-  //http://127.0.0.1:1212/user/authentication_user?username=1srtring&password=srtring
-  //http://127.0.0.1:1212/user/authentication_user?username=1string&password=string
   return handleButtonClick;
 };

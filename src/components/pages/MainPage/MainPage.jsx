@@ -4,21 +4,23 @@ import { CategoryList } from "../../CategoryList";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 //import { useAddCategories } from "../../../hooks/useAddCategories";
-
+import "./MainPage.css";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { AddCategory } from "./AddCategory";
 import { useLazyAxios } from "use-axios-client";
 import { api } from "../../../Const/const";
+import { TasksList } from "../../TasksList";
+import { AddTask } from "./AddTask";
 
 export function MainPage() {
   const navigate = useNavigate();
   const [modal, setModal] = useState(false);
-  const [post, setPost] = useState({ title: "" });
+  const [modalTasks, setModalTasks] = useState(false);
+  const [catIdForTAsk, setCatIdForTAsk] = useState();
 
   const handleAddTask = "";
 
-  const posts = useSelector((state) => state.category);
   //
 
   const token = Cookies.get("userToken");
@@ -27,7 +29,10 @@ export function MainPage() {
   const [trigger, { data, loading: isLoading }] = useLazyAxios({
     url: `${api}/categories/get`,
   });
-
+  const [triggerTasks, { data: tasks }] = useLazyAxios({
+    url: `${api}/tasks/get_with_id?user_id=${token}`,
+  });
+  console.log(tasks);
   //   const handleCreate = (e) => {
   //     //e.preventDefault();
   //     setPost({ ...post, title: e.target.value });
@@ -46,46 +51,73 @@ export function MainPage() {
           />
         </MyModal>
       )}
-      <div>
-        {!isUserAuthorised && (
-          <>
-            <button onClick={() => navigate("/sign-in")}>Авторизация</button>
-            <button onClick={() => navigate("/sign-up")}>Регистрация</button>
-            <div>Войдите в аккаунт</div>
-          </>
-        )}
-        {isUserAuthorised && (
-          <>
-            <button
-              onClick={() => {
-                Cookies.remove("userToken");
-                navigate("/");
-              }}
-            >
-              Выйти из аккаунта
-            </button>
-          </>
-        )}
+      {modalTasks && (
+        <MyModal visible={modalTasks} setVisisble={setModalTasks}>
+          <AddTask
+            setVisisble={setModalTasks}
+            trigger={triggerTasks}
+            isLoading={isLoading}
+            categories={data}
+          />
+        </MyModal>
+      )}
+      <div className="background">
+        <h1 className="header">
+          TODOLIST
+          {!isUserAuthorised && (
+            <>
+              <button className="authb" onClick={() => navigate("/sign-in")}>
+                Авторизация
+              </button>
+              <button className="authb" onClick={() => navigate("/sign-up")}>
+                Регистрация
+              </button>
+              <div>Войдите в аккаунт</div>
+            </>
+          )}
+          {isUserAuthorised && (
+            <>
+              <button
+                className="authb"
+                onClick={() => {
+                  Cookies.remove("userToken");
+                  navigate("/");
+                }}
+              >
+                Выйти из аккаунта
+              </button>
+            </>
+          )}
+        </h1>
 
-        <h1>TODOLIST</h1>
-        <div>
-          <h2>Категории</h2>
-          <MyButton style={{ marginTop: 30 }} onClick={() => setModal(true)}>
-            Создать категорию
+        <div className="pryam1">
+          <h2 className="categ">Категории</h2>
+          <MyButton
+            className="fontbutcat"
+            style={{ marginTop: -50 }}
+            onClick={() => setModal(true)}
+          >
+            + Создать категорию
           </MyButton>
 
           <CategoryList
-            posts={posts}
             data={data}
             trigger={trigger}
             token={token}
+            setCatIdForTAsk={setCatIdForTAsk}
           />
         </div>
-        <div>
-          <h2>Задачи</h2>
-          <MyButton style={{ marginTop: 30 }} onClick={() => setModal(true)}>
-            Создать категорию
+        <div className="pryam2">
+          <h2 className="zadachi">Список задач</h2>
+          <MyButton
+            className="fontbutzad"
+            style={{ marginTop: -50 }}
+            onClick={() => setModalTasks(true)}
+          >
+            + Создать задачу
           </MyButton>
+
+          <TasksList data={tasks} trigger={triggerTasks} token={token} />
         </div>
       </div>
     </>

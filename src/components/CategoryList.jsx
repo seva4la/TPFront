@@ -11,14 +11,14 @@ import { useState } from "react";
 import { MyModal } from "./MyModal/MyModal";
 import { UpdateCat } from "./pages/MainPage/UpdateCat";
 
-export const CategoryList = ({ posts, trigger, data, isLoading, token }) => {
+export const CategoryList = ({ trigger, data, isLoading, token }) => {
   const [modalUpdateCat, setModalUpdateCat] = useState(false);
   const [catId, setCatId] = useState();
 
   const categories = useGetCategories({ trigger, data, isLoading, token });
 
   if (!categories || categories.length === 0) {
-    return <h1 style={{ textAlign: "center" }}>Категории не найдены</h1>;
+    return <h2 style={{ textAlign: "center" }}>Категории не найдены</h2>;
   }
 
   return (
