@@ -45,7 +45,7 @@
   font-size: 16px;
   box-sizing: border-box;
 }
-.register-button {
+.new-register-button {
   width: 100%;
   padding: 10px;
   background-color: #ffffff;
@@ -53,10 +53,10 @@
   border-radius: 5px;
   border: 1px solid #4caf50;
   color: #4caf50;
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 16px;
+  margin-top: 16px;
 }
 .auth-button {
   width: 100%;

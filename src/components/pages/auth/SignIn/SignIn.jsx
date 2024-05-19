@@ -50,11 +50,12 @@ export const SignIn = () => {
                 required
               />
             </div>
-            <button type="submit" className="register-button">
-              Зарегистрироваться
-            </button>
+
             <button type="submit" className="auth-button">
               Войти
+            </button>
+            <button type="submit" className="new-register-button">
+              Зарегистрироваться
             </button>
           </form>
         </div>

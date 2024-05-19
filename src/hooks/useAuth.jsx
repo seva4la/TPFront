@@ -27,13 +27,13 @@ export const useUserAuth = (form) => {
     } catch (error) {
       console.error(error);
       console.log(error.response);
-      if (error.response && error.response.statusText == "Not Found") {
-        alert(
-          "Пользователь не найден. Попробуете зарегестрироваться или изменить введённые данные"
-        );
-      }
+
+      alert(
+        "Пользователь не найден. Попробуете зарегестрироваться или изменить введённые данные"
+      );
     }
   };
-
+  //http://127.0.0.1:1212/user/authentication_user?username=1srtring&password=srtring
+  //http://127.0.0.1:1212/user/authentication_user?username=1string&password=string
   return handleButtonClick;
 };
