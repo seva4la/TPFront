@@ -3,6 +3,7 @@
 import React from "react";
 import { Edit, Trash } from "tabler-icons-react";
 import { useDeleteTask } from "../hooks/useDeleteTask";
+import "./TaskItem.css";
 
 export const TaskItem = ({
   post,
@@ -17,8 +18,8 @@ export const TaskItem = ({
     <div>
       <div className="post">
         <div className="post__content">
-          <div>{post.title}</div>
-          <button
+          <div className="boxtas">{post.title}</div>
+          <button className="edtasit"
             onClick={() => {
               setCatId(post.id);
               setModalUpdateCat(true);
@@ -26,7 +27,7 @@ export const TaskItem = ({
           >
             <Edit />
           </button>
-          <button
+          <button className="trtasit"
             onClick={() => {
               handleDelete(post.id, trigger);
               trigger();

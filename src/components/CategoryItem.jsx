@@ -4,6 +4,7 @@ import React from "react";
 import { Edit, Trash } from "tabler-icons-react";
 import { useDispatch, useSelector } from "react-redux";
 import { useDeleteCat } from "../hooks/useDeleteCat";
+import "./CategoryItem.css";
 
 export const CategoryItem = ({
   post,
@@ -15,19 +16,19 @@ export const CategoryItem = ({
   const handleDelete = useDeleteCat();
   //onClick={setModalUpdateCat(true)}
   return (
-    <div>
-      <div className="post">
+    <div >
+      <div className="post" >
         <div className="post__content">
-          <div>{post.title}</div>
-          <button
+          <div className="boxcat">{post.title}</div>
+          <button className="edcatit"
             onClick={() => {
               setCatId(post.id);
               setModalUpdateCat(true);
             }}
           >
-            <Edit />
+            <Edit/>
           </button>
-          <button
+          <button className="trcatit"
             onClick={() => {
               handleDelete(post.id, trigger);
               trigger();

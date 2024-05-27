@@ -12,20 +12,21 @@ export const UpdateTask = ({ setVisisble, trigger, data, id }) => {
   const handleUpdate = useUpdateTask();
 
   return (
-    <div>
-      <input
+    <div className="wintaskup">
+      <h3 className="crtaskup">Редактирование задачи</h3>
+      <input className ="enttup"
         value={catTitle}
         onChange={(e) => setCatTitle(e.target.value)}
         type="text"
-        placeholder="Name"
+        placeholder="Название задачи"
       />
-      <input
+      <input className="entdescup"
         value={catDescription}
         onChange={(e) => setCatDescription(e.target.value)}
         type="text"
-        placeholder="Description"
+        placeholder="Описание задачи"
       />
-      <MyButton
+      <MyButton className ="createtaskup"
         onClick={() => {
           handleUpdate({
             task_id: id,
@@ -38,6 +39,13 @@ export const UpdateTask = ({ setVisisble, trigger, data, id }) => {
         }}
       >
         Обновить
+      </MyButton>
+      <MyButton className ="canceltup"
+        onClick={() => {
+          setVisisble(false);
+        }}
+      >
+        Отменить
       </MyButton>
     </div>
   );

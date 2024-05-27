@@ -1,0 +1,43 @@
+.boxtas{
+    background-color: #f2e9fa;
+    width: 550px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-style: var(bold);
+    margin-top: 100px;
+    margin: 20px;
+    margin-left:110px;
+    padding-block: 20px;
+    padding-inline: 15px;
+    border-radius: 15px;
+    border: 3px solid #592d81;
+}
+
+.edtasit{
+    background-color: #f2e9fa;
+    color:black;
+    border-radius: 10px;
+    border: none;
+    margin: 5px 5px 5px 5px;
+    height: 30px;
+    width: 30px;
+    margin-left: 590px;
+    margin-top: -65px;
+    align-content: center;
+    position: absolute;
+}
+
+
+.trtasit{
+    background-color: #f2e9fa;
+    color:black;
+    border-radius: 10px;
+    border: none;
+    margin: 5px 5px 5px 5px;
+    height: 30px;
+    width: 30px;
+    margin-left: 630px;
+    margin-top: -65px;
+    align-content: center;
+    position: absolute;
+}

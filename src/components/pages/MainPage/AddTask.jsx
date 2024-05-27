@@ -57,14 +57,14 @@ export const AddTask = ({ setVisisble, trigger, categories }) => {
           // trigger();
         }}
       >
-        создать{" "}
+        Создать{" "}
       </MyButton>
       <MyButton className ="cancelt"
         onClick={() => {
           setVisisble(false);
         }}
       >
-        Отмена
+        Отменить
       </MyButton>
     </div>
   );

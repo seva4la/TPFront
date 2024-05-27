@@ -1,6 +1,7 @@
 /* Основные стили для компонента регистрации */
 .wrapper {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
   background-color: #f7f7f7;
   margin: 0;
   padding: 0;
@@ -46,22 +47,25 @@
   box-sizing: border-box;
 }
 .new-register-button {
+  font-family: "Montserrat", sans-serif;
   width: 100%;
   padding: 10px;
   background-color: #ffffff;
   border: none;
   border-radius: 5px;
-  border: 1px solid #4caf50;
-  color: #4caf50;
+  border: 1px solid #592d81;
+  color: #592d81;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 16px;
 }
 .auth-button {
+  font-family: "Montserrat", sans-serif;
+  font-style: bold;
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #592d81;
   border: none;
   border-radius: 5px;
   color: white;
@@ -71,7 +75,7 @@
 }
 
 .auth-button:hover {
-  background-color: #45a049;
+  background-color: #592d81;
 }
 
 @media (max-width: 500px) {
