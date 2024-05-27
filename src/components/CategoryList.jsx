@@ -43,7 +43,7 @@ export const CategoryList = ({ trigger, data, isLoading, token }) => {
           <UpdateCat
             id={catId}
             setVisisble={setModalUpdateCat}
-            trigger={trigger}
+            //trigger={trigger}
             isLoading={isLoading}
           />
         </MyModal>

@@ -1,0 +1,90 @@
+.wintask{
+    
+    background-color: #ead9fa;
+    height: 300px;
+    width: 450px;
+    border-radius: 15px;
+    border: 3px solid #592d81;
+    margin-top: -50px;
+    margin-left: -150px;
+    position: absolute;
+}
+.crtask{
+    /* //top: 80px; */
+    margin-top: 30px;
+    margin-left: 130px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 20px;
+}
+
+.entt{
+    margin-left: 47px;
+    margin-top: -10px;
+    background-color: white;
+    border-radius: 12px;
+    border: none;
+    height: 30px;
+    width: 350px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+
+.entdesc{
+    margin-top: 20px;
+    margin-left: 47px;
+    background-color: white;
+    border-radius: 12px;
+    border: none;
+    height: 30px;
+    width: 350px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+
+.chocat{
+    color: #592d81;
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    height: 25px;
+    width: 100px;
+    border: 2px solid #592d81;
+    border-radius: 15px;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 175px;
+
+}
+
+.createtask{
+    color: white;
+    background-color: #592d81;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    height: 45px;
+    width: 100px;
+    border: none;
+    border-radius: 15px;
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 100px;
+
+}
+
+.cancelt{
+    color: #592d81;
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    height: 45px;
+    width: 100px;
+    border: 2px solid #592d81;
+    border-radius: 15px;
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 250px;
+
+}

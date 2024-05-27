@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MyButton } from "../../button/MyButton";
 import { useUpdateTask } from "../../../hooks/useUpdateTask";
+import "./UpdateTask.css";
 
 export const UpdateTask = ({ setVisisble, trigger, data, id }) => {
   const task = data.find((task) => task.id === id);
@@ -36,7 +37,7 @@ export const UpdateTask = ({ setVisisble, trigger, data, id }) => {
           trigger();
         }}
       >
-        обновить название категории
+        Обновить
       </MyButton>
     </div>
   );

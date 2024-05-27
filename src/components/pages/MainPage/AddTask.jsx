@@ -4,6 +4,7 @@ import { MyButton } from "../../button/MyButton";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { useCreateTask } from "../../../hooks/useCreateTask";
+import "./AddTask.css";
 export const AddTask = ({ setVisisble, trigger, categories }) => {
   const navigate = useNavigate();
   const token = Cookies.get("userToken");
@@ -24,9 +25,23 @@ export const AddTask = ({ setVisisble, trigger, categories }) => {
     setCatId(event.target.value);
   };
   return (
-    <div>
-      <div>
-        <select onChange={handleChange}>
+    <div className = "wintask">
+      <h3 className="crtask">Создание задачи</h3>
+      
+      <input className ="entt"
+        value={catTitle}
+        onChange={(e) => setCatTitle(e.target.value)}
+        type="text"
+        placeholder="Название задачи"
+      />
+      <input className="entdesc"
+        value={catDescription}
+        onChange={(e) => setCatDescription(e.target.value)}
+        type="text"
+        placeholder="Описание задачи"
+      />
+  <div >
+        <select className="chocat" onChange={handleChange}>
           {categories.map((category) => (
             <option key={category.id} value={category.id}>
               {category.title}
@@ -34,20 +49,7 @@ export const AddTask = ({ setVisisble, trigger, categories }) => {
           ))}
         </select>
       </div>
-      <input
-        value={catTitle}
-        onChange={(e) => setCatTitle(e.target.value)}
-        type="text"
-        placeholder="Name"
-      />
-      <input
-        value={catDescription}
-        onChange={(e) => setCatDescription(e.target.value)}
-        type="text"
-        placeholder="Description"
-      />
-
-      <MyButton
+      <MyButton className ="createtask"
         onClick={() => {
           handleAddCategory();
           setVisisble(false);
@@ -56,6 +58,13 @@ export const AddTask = ({ setVisisble, trigger, categories }) => {
         }}
       >
         создать{" "}
+      </MyButton>
+      <MyButton className ="cancelt"
+        onClick={() => {
+          setVisisble(false);
+        }}
+      >
+        Отмена
       </MyButton>
     </div>
   );

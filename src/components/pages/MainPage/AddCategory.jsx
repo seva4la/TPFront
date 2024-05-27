@@ -3,6 +3,7 @@ import { useState } from "react";
 import { MyButton } from "../../button/MyButton";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import "./AddCategory.css";
 export const AddCategory = ({ setVisisble, trigger }) => {
   const navigate = useNavigate();
   const token = Cookies.get("userToken");
@@ -12,15 +13,16 @@ export const AddCategory = ({ setVisisble, trigger }) => {
   console.log(catTitle, typeof catTitle);
 
   return (
-    <div>
-      <input
+    <div className = "win">
+      <h3 className="crcat">Создание категории</h3>
+      <input className ="ent"
         value={catTitle}
         onChange={(e) => setCatTitle(e.target.value)}
         type="text"
-        placeholder="Name"
+        placeholder="Введите название"
       />
 
-      <MyButton
+      <MyButton className ="create"
         onClick={() => {
           handleAddCategory();
           setVisisble(false);
@@ -28,7 +30,14 @@ export const AddCategory = ({ setVisisble, trigger }) => {
           // trigger();
         }}
       >
-        создать{" "}
+        Создать{" "}
+      </MyButton>
+      <MyButton className ="cancel"
+        onClick={() => {
+          setVisisble(false);
+        }}
+      >
+        Отменить
       </MyButton>
     </div>
   );

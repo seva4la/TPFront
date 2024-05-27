@@ -1,0 +1,61 @@
+.win{
+    
+    background-color: #ead9fa;
+    height: 200px;
+    width: 450px;
+    border-radius: 15px;
+    border: 3px solid #592d81;
+    margin-top: -50px;
+    margin-left: -150px;
+    position: absolute;
+}
+.crcat{
+    /* //top: 80px; */
+    margin-top: 30px;
+    margin-left: 110px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 20px;
+}
+
+.ent{
+    margin-left: 47px;
+    background-color: white;
+    border-radius: 12px;
+    border: none;
+    height: 30px;
+    width: 350px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+
+.create{
+    color: white;
+    background-color: #592d81;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    height: 45px;
+    width: 100px;
+    border: none;
+    border-radius: 15px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -300px;
+
+}
+
+.cancel{
+    color: #592d81;
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    height: 45px;
+    width: 100px;
+    border: 2px solid #592d81;
+    border-radius: 15px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -150px;
+
+}

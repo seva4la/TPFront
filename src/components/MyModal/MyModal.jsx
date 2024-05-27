@@ -7,7 +7,7 @@ export const MyModal = ({ children, visible, setVisisble }) => {
   return (
     <div className={`${cl.Modal}`}>
       <div className={cl.ModalContent} onClick={(e) => e.stopPropagation()}>
-        <button onClick={() => setVisisble(false)}>Отмена</button>
+        {/* <button onClick={() => setVisisble(false)}>Отмена</button> */}
         {children}
       </div>
     </div>

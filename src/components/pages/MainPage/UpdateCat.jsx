@@ -5,27 +5,37 @@ import { MyButton } from "../../button/MyButton";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { useUpdateCategory } from "../../../hooks/useUpdateCat";
+import "./UpdateCat.css";
 
 export const UpdateCat = ({ setVisisble, trigger, id }) => {
   const [catTitle, setCatTitle] = useState("");
   const handleUpdate = useUpdateCategory();
   return (
-    <div>
-      <input
+    <div className = "winch">
+      <h3 className="chcat">Редактирование категории</h3>
+      <input 
+        className ="entch"
         value={catTitle}
         onChange={(e) => setCatTitle(e.target.value)}
         type="text"
-        placeholder="Name"
+        placeholder="Введите название"
       />
 
-      <MyButton
+      <MyButton className ="chan"
         onClick={() => {
           handleUpdate(catTitle, id, trigger);
           setVisisble(false);
           trigger();
         }}
       >
-        обновить название категории
+        Обновить
+      </MyButton>
+      <MyButton className ="cancelch"
+        onClick={() => {
+          setVisisble(false);
+        }}
+      >
+        Отмена
       </MyButton>
     </div>
   );
